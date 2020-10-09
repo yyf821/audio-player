@@ -1,0 +1,166 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    background-color: #394989;
+    color: #fff;
+    font-size: 1rem;
+    font-family: "Oxygen", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: .025rem;
+    line-height: 1.618;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.div-list {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#id-ul-song-list li {
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+}
+
+.one-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#id-ul-song-list li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.active::after {
+    content: '♪';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    color: white;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+.hide {
+    display: none;
+}
+
+a {
+    color: #fff;
+    outline: 0;
+    text-decoration: none;
+}
+
+.outer {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 20px;
+    background: #ddd;
+}
+
+.inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #4ea0ae;
+}
+
+.dot {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.btn-action {
+    cursor: pointer;
+    padding-top: 10px;
+    width: 30px;
+}
+
+.btn-ctn {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    /* position: relative; */
+}
+
+.infos-ctn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.btn-ctn button {
+    margin: 18px 5px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 28px;
+    outline: none;
+    cursor: pointer;
+}
+
+.infos-ctn>div {
+    margin-bottom: 8px;
+}
+
+.duration {
+    margin-left: 10px;
+}
+
+.title {
+    margin-left: 10px;
+    width: 210px;
+    text-align: center;
+}
+
+
+.div-list::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.div-list::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
+}

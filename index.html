@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Player</title>
+  <link rel="stylesheet" href="static/css/player.css">
+  <link rel="stylesheet" href="static/lib/material-design-iconic-font/css/material-design-iconic-font.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="player">
+      <audio id='id-audio-player' data-mode="loop" data-cur="0"></audio>
+      <div class="infos-ctn">
+        <span id="id-span-current">00:00</span>
+        <div class="title one-line" data-title="Audio Player">Audio Player</div>
+        <span id="id-span-duration">00:00</span>
+      </div>
+      <div class="outer">
+        <div class="inner">
+          <div class="dot"></div>
+        </div>
+      </div>
+      <div class="btn-ctn">
+        <div style="flex: 2;justify-content: space-around;display: flex;">
+          <button id="id-button-prev">
+            <i class="zmdi zmdi-skip-previous"></i>
+          </button>
+          <button id="id-button-slowdown">
+            <i class="zmdi zmdi-fast-rewind"></i>
+          </button>
+          <button id="id-button-play">
+            <i class='zmdi zmdi-play' id="icon-play"></i>
+            <i class='zmdi zmdi-pause' id="icon-pause" style="display: none"></i>
+          </button>
+          <button id="id-button-speedup">
+            <i class="zmdi zmdi-fast-forward"></i>
+          </button>
+          <button id="id-button-next">
+            <i class="zmdi zmdi-skip-next"></i>
+          </button>
+        </div>
+        <div style="flex: 1;justify-content: space-around;display: flex;">
+          <button id="id-button-mute">
+            <i id="icon-vol-up" class='zmdi zmdi-volume-up'></i>
+            <i id="icon-vol-mute" class='zmdi zmdi-volume-off' style="display: none"></i>
+          </button>
+          <button id="id-button-mode">
+            <i class="zmdi zmdi-repeat-one"></i>
+          </button>
+          <button id="id-button-menu">
+            <i class="zmdi zmdi-playlist-audio"></i>
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+    <!-- 播放列表 -->
+    <div class="div-list">
+      <ul id='id-ul-song-list'></ul>
+    </div>
+
+  </div>
+
+</body>
+<script>
+  //在electron中使用jQuery
+  window.nodeRequire = require
+  delete window.exports
+  delete window.module
+</script>
+<script src="static/lib/jquery.js"></script>
+<script src="static/player.js"></script>
+
+</html>
